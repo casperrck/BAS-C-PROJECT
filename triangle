@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class UcgenHesaplama {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // Dik kenarların uzunluklarını kullanıcıdan alma
+        System.out.print("Dik Kenar 1: ");
+        double kenar1 = input.nextDouble();
+
+        System.out.print("Dik Kenar 2: ");
+        double kenar2 = input.nextDouble();
+
+        // Hipotenüs hesaplama
+        double hipotenus = Math.sqrt(kenar1 * kenar1 + kenar2 * kenar2);
+        System.out.println("Hipotenüs: " + hipotenus);
+
+        // Üçgenin alanını hesaplama
+        double yariCevre = (kenar1 + kenar2 + hipotenus) / 2;
+        double alan = Math.sqrt(yariCevre * (yariCevre - kenar1) * (yariCevre - kenar2) * (yariCevre - hipotenus));
+        System.out.println("Üçgenin Alanı: " + alan);
+
+        input.close();
+    }
+}
