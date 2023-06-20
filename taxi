@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Taksimetre {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Gidilen Mesafeyi (KM) Girin: ");
+        double mesafe = input.nextDouble();
+
+        double taksimetreTutari = 10 + (mesafe * 2.20);
+        if (taksimetreTutari < 20) {
+            taksimetreTutari = 20;
+        }
+
+        System.out.println("Taksimetre Tutarı: " + taksimetreTutari + " TL");
+
+        input.close();
+    }
+}
