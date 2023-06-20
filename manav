@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class ManavKasa {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // Ürün fiyatları
+        double armutFiyat = 2.14;
+        double elmaFiyat = 3.67;
+        double domatesFiyat = 1.11;
+        double muzFiyat = 0.95;
+        double patlicanFiyat = 5.00;
+
+        // Kullanıcıdan alınan kilo miktarları
+        System.out.print("Armut Kaç Kilo? : ");
+        double armutKilo = input.nextDouble();
+
+        System.out.print("Elma Kaç Kilo? : ");
+        double elmaKilo = input.nextDouble();
+
+        System.out.print("Domates Kaç Kilo? : ");
+        double domatesKilo = input.nextDouble();
+
+        System.out.print("Muz Kaç Kilo? : ");
+        double muzKilo = input.nextDouble();
+
+        System.out.print("Patlıcan Kaç Kilo? : ");
+        double patlicanKilo = input.nextDouble();
+
+        // Toplam tutarın hesaplanması
+        double toplamTutar = (armutFiyat * armutKilo) + (elmaFiyat * elmaKilo) + (domatesFiyat * domatesKilo)
+                + (muzFiyat * muzKilo) + (patlicanFiyat * patlicanKilo);
+
+        System.out.println("Toplam Tutar : " + toplamTutar + " TL");
+
+        input.close();
+    }
+}
